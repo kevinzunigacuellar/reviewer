@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Menu, Diamond } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navigation = [{ name: "Dashboard", href: "/dashboard" }];
@@ -55,14 +55,7 @@ export default function HeaderMenu() {
           </nav>
         </SheetContent>
       </Sheet>
-      <SignedOut>
-        <SignInButton>
-          <Button>Sign in</Button>
-        </SignInButton>
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
+      <UserButton />
     </header>
   );
 }

@@ -30,7 +30,6 @@ export default function RootLayout({
             fontSans.variable
           )}
         >
-          <HeaderMenu />
           {children}
         </body>
       </html>
